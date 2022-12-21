@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cofrinho</h1>
+    <label>
+    Inserir 50 Centavos:
+    <input type="number" id="input_um" placeholder="Somente 50 Centavos" min="50" max="50">
+    </label>
+    <label >
+    Inserir 1 Real:
+    <input type="number" id="input_dois"  placeholder="Somente 1 Real" min="1" max="1">
+    </label>
+    <button onclick="calcular()">Guardar</button>
+    <button onclick="zerar()">Zerar</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    var cofrinho = []
+    function calcular(){
+        let n1 = Number(input_um.value)
+        let n2 = Number(input_dois.value)
+        var n1_total = n1 / 100
+        var soma = 0
+        var total = n1_total + n2 
+        var sum = 0
+    
+
+       cofrinho.push(total)
+
+        for(i=0;i<cofrinho.length;i++){
+            soma+=cofrinho[i]
+            resultado.innerHTML = `${soma}<br>`
+            if(cofrinho[i] > sum){
+                sum+=cofrinho[i]
+
+                resultado.innerHTML = `O Maior Valor que você depositou foi de ${sum}`
+        }
+       
+
+        } 
+     }
+        function zerar(){
+            cofrinho = [];
+            resultado.innerHTML = `${cofrinho}`
+          
+        }
+    
+</script>

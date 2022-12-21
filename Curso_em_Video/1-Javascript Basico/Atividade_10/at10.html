@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Externo</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+        body { font: 12pt Arial; }
+h1, h2, h3 { font-family: 'Pacifico', cursive; font-weight: normal;}
+button { font-size: 12pt; padding: 30px; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Externo</h1>
+    <button onclick="button_one()">Acão 1</button>
+    <button onclick="button_two()">Acão 2</button>
+    <button onclick="button_tree()">Acão 3</button>
+    <button onclick="button_four()">Acão 4</button>
+    <section>
+        <p id="resultado">
+            Aqui vou registrar suas ações com os botões acima.
+        </p>
+    </section>
+</body>
+</html>
+<script>
+    function button_one(){
+        resultado.innerHTML += ` <p>Clicou no primeiro botão </p> <br>`
+    }
+    function button_two(){
+        resultado.innerHTML += ` <p>Clicou no segundo botão </p><br>`
+    }
+    function button_tree(){
+        resultado.innerHTML += ` <p>Clicou no terceiro botão </p><br>`
+    }
+    function button_four(){
+        resultado.innerHTML += ` <p>Clicou no quarto botão </p><br>`
+    }
+</script>

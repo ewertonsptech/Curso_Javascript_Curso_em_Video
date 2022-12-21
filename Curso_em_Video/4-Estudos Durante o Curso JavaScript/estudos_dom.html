@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label>
+        Candidato A
+          <input type="text" id="n1">
+    </label>
+    <label>
+        Candidato B
+        <input type="text" id="n2">
+    </label>
+    <label>
+        Votos Brancos
+        <input type="text" id="n3">
+    </label>
+    <label>
+        Votos Nulos
+        <input type="text" id="n4">
+    </label>
+    <button onclick="calcular()">Calcular</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+function calcular(){
+
+     let candidato_a = Number(n1.value)
+     let candidato_b = Number(n2.value)
+     let votos_brancos = Number(n3.value)
+     let candidato_nulos = Number(n4.value)
+     let votos_totais = candidato_a + candidato_b + votos_brancos + candidato_nulos
+     let votos_totais_candidato_a = (candidato_a * 100) / votos_totais
+     let votos_totais_candidato_b = (candidato_b * 100)  / votos_totais
+     let votos_nulos = votos_brancos + candidato_nulos
+     let votos_totais_nulos = (votos_nulos * 100) / votos_totais
+
+    var div_candidato_a =  
+    resultado.innerHTML = `${votos_totais_candidato_a.toFixed(2)}`
+votos_totais_candidato_a.style.width = '50px'
+votos_totais_candidato_a.style.height = '100px'
+votos_totais_candidato_a.style.background = 'green'
+     
+}
+</script>

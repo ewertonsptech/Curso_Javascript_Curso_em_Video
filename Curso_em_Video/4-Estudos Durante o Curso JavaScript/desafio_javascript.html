@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+        body { font: 12pt Arial; }
+h1, h2, h3 { font-family: 'Pacifico', cursive; font-weight: normal;}
+button { font-size: 12pt; padding: 30px; }
+    </style>
+</head>
+<body>
+    <h1 class="texto">Preço Mudou</h1>
+
+    <button onclick="verificar()">
+        Verificar
+    </button>
+    <section>
+        <p id="resultado">Clique no botão para verificar a mudança de preço</p>
+    </section>
+</body>
+</html>
+<script>
+    function verificar(){
+    var preco = Number(prompt('Qual era o preço anterior do produto?'))
+    var preco_atual = Number(prompt('Qual o preço atual do produto'))
+    var resultado = document.getElementById('resultado')
+    var aumento = (preco - preco_atual) / preco
+    var total = aumento * 100
+    var aumento_real = preco_atual - preco
+    var desconto = preco - preco_atual
+     var desconto_percentual = (preco_atual / preco) * 100
+     var desconto_total = (1 * 100) - desconto_percentual
+
+   
+
+    if(preco_atual > preco){
+        resultado.innerHTML= `<h1>Analisando os valores informados</h1><br>
+    <p>O produto custava R$${preco.toFixed(2)} e agora custa R$${preco_atual} </p><br>
+    <p>O preço subiu R$ ${aumento_real} em relação ao preço anterior</p><br>
+    <p>Uma variação de  ${total.toFixed(1)}% pra cima</p>`
+    }
+    else {
+   resultado.innerHTML= `<h1>Analisando os valores informados</h1><br>
+    <p>O produto custava R$${preco.toFixed(2)} e agora custa R$${preco_atual} </p><br>
+    <p>Hoje o produto está mais barato</p><br>
+    <p>O preço caiu R$ ${desconto} em relação ao preço anterior</p><br>
+    <p>Uma variação de  ${desconto_total.toFixed(1)}% pra baixo</p>`
+    }
+
+    }
+</script>
