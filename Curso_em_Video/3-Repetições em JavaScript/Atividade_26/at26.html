@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+   
+   body { font: 12pt Arial; }
+   h1, h2, h3 { font-family: 'Pacifico', cursive; font-weight: normal;}
+   input[type=number] { font-size: 12pt; }
+   input[type=submit] { 
+       background-color: green; 
+       color: white; 
+       font-size: 12pt; 
+       padding: 5px; 
+   }
+       </style>
+</head>
+<body>
+    <h1>Super Tabuada</h1>
+    <p>Escreva um número na caixa a seguir e te mostrarei a tabuada dele.</p>
+    Número:<input type="number" id="numero_usuario">
+    <input type="submit" value="Tabuada" onclick="calcular()">
+    <section>
+        <p id="res">Preencha os dados acima e aperte o botão.</p>
+    </section>
+</body>
+</html>
+<script>
+    function calcular(){
+        var resultado = window.document.getElementById('res')
+        var numero = Number(numero_usuario.value)
+         resultado.innerHTML = ''
+        resultado.innerHTML+= `<h1>Tabuada de ${numero}</h1>`
+
+        for(i=1;i<=10;i++){
+            resultado.innerHTML+= `${numero} * ${i} = <b>${numero * i}</b><br>`
+        }
+    }
+</script>

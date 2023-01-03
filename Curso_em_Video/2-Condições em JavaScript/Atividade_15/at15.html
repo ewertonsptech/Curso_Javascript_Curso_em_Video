@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+        body { font: 12pt Arial; }
+h1, h2, h3 { font-family: 'Pacifico', cursive; font-weight: normal;}
+button { font-size: 12pt; padding: 30px; }
+    </style>
+</head>
+<body>
+    <h1>Analisando data e hora do Sistema</h1>
+
+    <button onclick="calcular()">
+        Iniciar Análise
+    </button>
+    <section>
+       
+        <p id="res">Aqui vai aparecer algo...</p>
+    </section>
+</body>
+</html>
+<script>
+    function calcular(){
+        var data = new Date();
+        var resultado = document.getElementById('res')
+        var ano = data.getFullYear()
+        var hora = data.getHours()
+        var minutos = data.getMinutes()
+        var mes = data.getMonth()
+        var dia = data.getDay()
+        var semana = data.getDay()
+        var segundos = data.getSeconds()
+        resultado.innerHTML = `<b>Dia:${dia + 1} </b><br>
+        <b>Mês: ${mes + 1}</b><br>
+        <b>Ano: ${ano}</b><br>
+
+        <b>Dia da semana: ${semana + 1} </b><br> 
+        <b>Hora: ${hora} </b><br>
+        <b>Minutos: ${minutos}</b><br>
+        <b>Segundos: ${segundos}</b>`
+    }
+</script>

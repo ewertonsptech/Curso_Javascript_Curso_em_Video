@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+        body {
+            font: 12pt Arial;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Pacifico', cursive;
+            font-weight: normal;
+        }
+
+        button {
+            font-size: 12pt;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Múltiplas ações</h1>
+    <button onclick="calcular()">Clique para iniciar</button>
+    <section>
+        <p id="res">Clique no botão acima para começar.</p>
+    </section>
+</body>
+
+</html>
+<script>
+    function calcular() {
+        var n1 = Number(prompt('Primeiro valor:'))
+        var n2 = Number(prompt('Segundo valor:'))
+        let op = Number(prompt(`Valores informados: ${n1} e ${n2}. \nO que vamos fazer? \n[1] Somar \n[2] Subtrair \n[3] Multiplicar \n[4] Dividir`))
+        var resultado = document.getElementById('res')
+        resultado.innerHTML = `<h2>Calculando...</h2>`
+
+    
+        switch (op) {
+            case 1:
+                resultado.innerHTML = `${n1} + ${n2} = ${n1 + n2}`
+                break
+            case 2:
+                resultado.innerHTML = `${n1} - ${n2} = ${n1 - n2}`
+                break
+            case 3:
+                resultado.innerHTML = `${n1} * ${n2} = ${n1 * n2}`
+                break
+            case 4:
+                resultado.innerHTML = `${n1}  / ${n2} = ${n1 / n2}`
+                break
+            default:
+                resultado.innerHTML = `<p>OPÇÃO INVÁLIDA! Você digitou ${n1} e ${n2}, mas não sei o que fazer com eles.</p>`
+                break
+
+        }
+    }
+</script>

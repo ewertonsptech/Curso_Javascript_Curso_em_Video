@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+        body { font: 12pt Arial; }
+h1, h2, h3 { font-family: 'Pacifico', cursive; font-weight: normal;}
+button { font-size: 12pt; padding: 30px; }
+    </style>
+</head>
+<body>
+    <h1>Contando de 1 a 10 (marcando os pares)</h1>
+    <button onclick="calcular()">Contar de 1 a 10</button>
+    <section>
+        <p id="res">Aperte o botão acima para contar</p>
+    </section>
+</body>
+</html>
+<script>
+    function calcular(){
+        var numero = 1
+        var resultado = document.getElementById('res')
+
+        resultado.innerHTML += `<h2>Contando de 1 até 10, marcando os pares</h2>`
+        while(numero <=10){
+            if(numero % 2 == 0){
+            resultado.innerHTML += `<mark><strong>👉${numero}</mark></strong>`
+        }
+        else{
+        resultado.innerHTML += `<b>👉${numero}</b>`
+    }
+            numero++
+        }
+        
+    }
+</script>
