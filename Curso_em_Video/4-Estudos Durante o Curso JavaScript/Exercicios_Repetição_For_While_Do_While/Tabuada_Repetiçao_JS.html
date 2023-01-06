@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+
+    <link rel="stylesheet" href="Tabuada_Repetiçao_JS.css">
+    <link rel="icon" href="js.png">
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+         </header>
+         <section>
+             <div>
+              Número: <input type="number" id="input_tabuada">
+           
+
+             <input type="submit" value="Gerar Tabuda" onclick="calcular()"> 
+             </div>
+     
+              <div>
+          <p id="res"></p>
+             </div>
+         </section>
+     
+         <footer>
+     <p>&copy; CursoemVideo</p>
+         </footer>
+</body>
+</html>
+<script>
+    function calcular(){
+  var numero = document.getElementById('input_tabuada')
+    res.innerHTML = ''
+  if(Number(numero.value) <= 0){
+    alert(`[ERRO] Verifique os dados e tente novamente`)
+    numero.value = 1
+  }
+  else {
+    var numero_usuario = Number(input_tabuada.value)
+    for (i = 0; i <= 10; i++) {
+  res.innerHTML+= `<td>${numero_usuario} * ${i} = <b>${numero_usuario * i}</b></td><br>`
+}
+  }
+    }
+</script>

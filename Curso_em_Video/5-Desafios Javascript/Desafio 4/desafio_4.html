@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+        body { font: 12pt Arial; }
+h1, h2, h3 { font-family: 'Pacifico', cursive; font-weight: normal;}
+button { font-size: 12pt; padding: 30px; }
+    </style>
+</head>
+<body>
+    <h1>Calculando o troco</h1>
+    <button onclick="compar()">Comprar produto</button>
+</body>
+</html>
+<script>
+    function compar(){
+        var produto = prompt('Qual produto você está comprando?')
+        var valor = Number(prompt(`Quanto custa o ${produto} que voce está comprando?`))
+        var valor_pago = Number(prompt(`Qual foi o valor que deu pra pagar o ${produto}`))
+        var total = valor_pago - valor
+        alert(`Você comprou um ${produto} que custou R$ ${valor} Deu R$ ${valor_pago} em dinheiro e vai receber R$ ${total} de troco. Volte Sempre! ` )
+    }
+</script>

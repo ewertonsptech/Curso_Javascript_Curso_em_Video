@@ -1,0 +1,3 @@
+function calcular(){
+alert("Funciona")
+}

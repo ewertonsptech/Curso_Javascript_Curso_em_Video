@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Tabuada</h1>
+    <p>Digite um número:</p> <input type="number" id="input_tabuada">
+
+    <button onclick="calcular()">Ver Tabuada</button>
+
+    <select id="select_tabuada">
+    
+    </select>
+</body>
+</html>
+<script>
+    function calcular(){
+        var numero = document.getElementById('input_tabuada')
+       var select = window.document.getElementById('select_tabuada')
+       select.innerHTML = ''
+
+        if(Number(numero.value) == 0){
+            alert("[ERRO] Caixa vazia, tente novamente")
+            numero.value = 1
+        }
+        else{
+            var n = Number(input_tabuada.value)
+         
+
+            for(e=1;e<=10;e++){
+                
+                var option = document.createElement('option')
+                option.text = `${n} * ${e} =  ${n * e}`
+               select.appendChild(option)
+            }
+        }
+    }
+</script>
